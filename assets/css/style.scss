@@ -1,13 +1,55 @@
+$grey: #bdbdbd;
+$black: #333;
 a{
     text-decoration: none;
 }
 body{
     font-family: 'TT Hoves Regular';
+    font-size: 12px;
 }
+p{
+    font-size: 16px;
+    margin: 0;
+}
+
+/* --- COMMON --- */
+
+.heading{
+    margin: 0 0 60px 0;
+    font-size: 64px;
+    line-height: 100%;
+    font-weight: inherit;
+    font-family: 'TT Hoves Light';
+    color: $grey;
+}
+.heading_main{
+    text-transform: uppercase;
+    margin: 0;
+    span{
+        font-family: 'TT Hoves Bold';
+        color: $black;
+    }
+}
+.link{
+    text-transform: uppercase;
+    color: $black;
+    letter-spacing: 0.2em;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
 .wrapper{
     width: 81.25%;
     margin: 0 auto;
 }
+section:not(#home){
+    margin-top: 120px;
+}
+
+/* --- HEADER --- */
+
 .header__content{
     display: flex;
     justify-content: space-between;
@@ -22,12 +64,73 @@ body{
 }
 .header__item{
     margin: 0 7% 0 0;
-    text-transform: uppercase;
+    &:hover{
+        border-bottom: 1px solid $black;
+        border-top: 1px solid $black;
+    }
 }
 
+/* --- HOME --- */
 
 
+/* --- ABOUT --- */
 
+#about{
+    .heading{
+        margin: 0 0 20px 0;
+    }
+    .content{
+        background-color: #fbfbfb;
+        padding: 30px 70px;
+    }
+}
+.about__gallery{
+    display: flex;
+    padding: 0 30px;
+    img{
+        min-width: 270px;
+    }
+}
+.about__img_double{
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- TASKS --- */
+
+.tasks__item{
+    display: flex;
+    width: 50%;
+    &::before{
+        content: url(../img/tasks/02.svg)
+    }
+    &:first-of-type{
+        p{
+            margin-right: 30%;
+        }
+        &::before{
+        content: url(../img/tasks/01.svg)
+        }
+    }
+    p{
+        margin-left: 30px;
+        line-height: 36px;
+        font-size: 22px;
+    }
+}
+
+/* --- PROJECTS --- */
+
+
+/* --- CONTACTS --- */
+
+#contacts{
+    .heading{
+        margin: 0 0 20px 0;
+    }
+}
+
+/* --- FONTS --- */
 
 @font-face {
     font-family: 'TT Hoves Light';

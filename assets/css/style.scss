@@ -35,6 +35,17 @@ p{
     color: $black;
     letter-spacing: 0.2em;
 }
+.button{
+    display: inline-block;
+    padding: 24px 65px;
+    background-color: #fff;
+    &::after{
+        content: url(../img/arrow-next.svg);
+        margin-left: 12px;
+        vertical-align: middle;
+    }
+}
+
 .content{
     display: flex;
     justify-content: space-between;
@@ -72,6 +83,41 @@ section:not(#home){
 
 /* --- HOME --- */
 
+.home__content{
+    height: 829px;
+    justify-content: center;
+}
+.home__text{
+    display: flex;
+    flex-direction: column;
+    margin-right: 122px;
+}
+.home__heading{
+    margin-top: 336px;
+}
+.home__arrows{
+    margin-top: 90px;
+}
+.arrow{
+    content: url(../img/arrow-next.svg);
+    padding: 15px;
+    border: 1px solid #f2f2f2;
+.arrow_prev{
+    content: url(../img/arrow-prev.svg);
+    margin-right: 23px;
+}
+.home__img{
+    background: url(../img/home.jpg) center/ cover no-repeat;
+    width: 100%;
+    max-width: 770px;
+    height: auto;
+    position: relative;
+    .button{
+        position: absolute;
+        bottom: 0;
+        padding: 30px 50px;
+    }
+}
 
 /* --- ABOUT --- */
 
@@ -82,6 +128,12 @@ section:not(#home){
     .content{
         background-color: #fbfbfb;
         padding: 30px 70px;
+    }
+    .text{
+        line-height: 25px;
+    }
+    .button{
+        margin: 20px 0 0 0;
     }
 }
 .about__gallery{
@@ -98,6 +150,11 @@ section:not(#home){
 
 /* --- TASKS --- */
 
+#projects{
+    .heading{
+        margin-bottom: 30px;
+    }
+}
 .tasks__item{
     display: flex;
     width: 50%;
@@ -121,12 +178,55 @@ section:not(#home){
 
 /* --- PROJECTS --- */
 
+.projects__gallery{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    & img{
+        margin-top: 30px;
+    }
+}
 
 /* --- CONTACTS --- */
 
 #contacts{
     .heading{
         margin: 0 0 20px 0;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 391px;
+        input, textarea{
+            margin: 0 0 10px 0;
+            padding: 15px 21px;
+            background-color: #f3f3f3;
+            color: #000;
+            border: none;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            &:-webkit-input-placeholder,
+            &:-ms-input-placeholder{
+                color: #8d8d8d;
+            }
+            &:focus::-webkit-input-placeholder, 
+            &:focus::-ms-input-placeholder{
+                color: transparent;
+            }
+        }
+        input[name=email]::placeholder::after{
+            content: '*';
+            color: red;
+        }
+        textarea{
+            height: 147px;
+        }
+    }
+    .contacts__img{
+        width: auto;
+    }
+    .contacts__img img{
+        width: 100%;
     }
 }
 

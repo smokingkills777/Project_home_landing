@@ -30,6 +30,15 @@ p {
   color: #333333;
   letter-spacing: 0.2em; }
 
+.button {
+  display: inline-block;
+  padding: 24px 65px;
+  background-color: #fff; }
+  .button::after {
+    content: url(../img/arrow-next.svg);
+    margin-left: 12px;
+    vertical-align: middle; }
+
 .content {
   display: flex;
   justify-content: space-between; }
@@ -61,12 +70,51 @@ section:not(#home) {
     border-top: 1px solid #333333; }
 
 /* --- HOME --- */
+.home__content {
+  height: 829px;
+  justify-content: center; }
+
+.home__text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 122px; }
+
+.home__heading {
+  margin-top: 336px; }
+
+.home__arrows {
+  margin-top: 90px; }
+
+.arrow {
+  content: url(../img/arrow-next.svg);
+  padding: 15px;
+  border: 1px solid #f2f2f2;
+  width: 24px; }
+
+.arrow_prev {
+  content: url(../img/arrow-prev.svg); }
+
+.home__img {
+  background: url(../img/home.jpg) center/cover no-repeat;
+  width: 100%;
+  max-width: 770px;
+  height: auto;
+  position: relative; }
+  .home__img .button {
+    position: absolute;
+    bottom: 0;
+    padding: 30px 50px; }
+
 /* --- ABOUT --- */
 #about .heading {
   margin: 0 0 20px 0; }
 #about .content {
   background-color: #fbfbfb;
   padding: 30px 70px; }
+#about .text {
+  line-height: 25px; }
+#about .button {
+  margin: 20px 0 0 0; }
 
 .about__gallery {
   display: flex;
@@ -79,6 +127,9 @@ section:not(#home) {
   flex-direction: column; }
 
 /* --- TASKS --- */
+#projects .heading {
+  margin-bottom: 30px; }
+
 .tasks__item {
   display: flex;
   width: 50%; }
@@ -94,9 +145,41 @@ section:not(#home) {
     font-size: 22px; }
 
 /* --- PROJECTS --- */
+.projects__gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .projects__gallery img {
+    margin-top: 30px; }
+
 /* --- CONTACTS --- */
 #contacts .heading {
   margin: 0 0 20px 0; }
+#contacts form {
+  display: flex;
+  flex-direction: column;
+  width: 391px; }
+  #contacts form input, #contacts form textarea {
+    margin: 0 0 10px 0;
+    padding: 15px 21px;
+    background-color: #f3f3f3;
+    color: #000;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 0.04em; }
+    #contacts form input:-webkit-input-placeholder, #contacts form input:-ms-input-placeholder, #contacts form textarea:-webkit-input-placeholder, #contacts form textarea:-ms-input-placeholder {
+      color: #8d8d8d; }
+    #contacts form input:focus::-webkit-input-placeholder, #contacts form input:focus::-ms-input-placeholder, #contacts form textarea:focus::-webkit-input-placeholder, #contacts form textarea:focus::-ms-input-placeholder {
+      color: transparent; }
+  #contacts form input[name=email]::placeholder::after {
+    content: '*';
+    color: red; }
+  #contacts form textarea {
+    height: 147px; }
+#contacts .contacts__img {
+  width: auto; }
+#contacts .contacts__img img {
+  width: 100%; }
 
 /* --- FONTS --- */
 @font-face {

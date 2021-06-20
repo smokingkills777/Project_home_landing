@@ -35,9 +35,13 @@
                             project<br><span>home</span>
                         </h1>
                     </div>
+                    <div class="home__arrows">
+                        <a href="#" class="arrow arrow_prev"></a>
+                        <a href="#" class="arrow arrow_next"></a>
+                    </div>
                 </div>
                 <div class="home__img">
-                    <img src="assets/img/home.jpg" alt="">
+                    <a href="#" class="link button">взглянуть</a>
                 </div>
             </div>
         </section>
@@ -81,11 +85,21 @@
         <section id="projects" class="wrapper">
             <h2 class="heading">Наши проекты</h2>
             <div class="projects__gallery">
-                <img src="assets/img/projects/01.jpg" alt="">
-                <img src="assets/img/projects/02.jpg" alt="">
-                <img src="assets/img/projects/03.jpg" alt="">
-                <img src="assets/img/projects/04.jpg" alt="">
-                <img src="assets/img/projects/05.jpg" alt="">
+                <div class="projects__item">
+                    <img src="assets/img/projects/01.jpg" alt="">
+                </div>
+                <div class="projects__item">
+                    <img src="assets/img/projects/02.jpg" alt="">
+                </div>
+                <div class="projects__item">
+                    <img src="assets/img/projects/03.jpg" alt="">
+                </div>
+                <div class="projects__item">
+                    <img src="assets/img/projects/04.jpg" alt="">
+                </div>
+                <div class="projects__item">
+                    <img src="assets/img/projects/05.jpg" alt="">
+                </div>
             </div>
             <a href="#" class="link button">все проекты</a>
         </section>
@@ -94,7 +108,13 @@
             <h2 class="heading">Связаться с нами</h2>
             <div class="content">
                 <div class="contacts__form">
-
+                    <form action="#">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="text" name="phone_number" placeholder="Номер телефона">
+                        <input type="email" name="email" placeholder="E-mail">
+                        <input type="text" name="product" placeholder="Интересующий товар/услуга">
+                        <textarea name="message" placeholder="Сообщение"></textarea>
+                    </form>
                 </div>
                 <div class="contacts__img">
                     <img src="assets/img/contacts/01.jpg" alt="">
